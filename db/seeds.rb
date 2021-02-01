@@ -13,7 +13,7 @@ Like.destroy_all
 
 imageURL = 'https://images.unsplash.com/photo-1587502537147-2ba64a62e3d3?ixid=MXwxMjA3fDF8MHxzZWFyY2h8MXx8aGlraW5nfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60'
 
-5.times do 
+1.times do 
     User.create( 
         first_name: Faker::Name.first_name,
         middle_name: Faker::Name.middle_name,
