@@ -19,8 +19,8 @@ class PostsController < ApplicationController
     end
 
     def create
-        # byebug
         userId = JWT.decode(cookies.signed[:jwt], Rails.application.secrets.secret_key_base, true, algorithm: 'HS256')[0]["user_id"]
+        # run heroku config:set RAILS_MASTER_KEY=`cat config/master.key`
         @post = Post.new(post_params)
         @post.user_id = userId
         if !@post.save
